@@ -1,0 +1,37 @@
+<h1>Authentication Result</h1>
+
+<div *ngIf="authCodePhaseQueryParamMap.size > 0">
+  <h2>Phase: Auth Code</h2>
+  <table border="1">
+    <thead>
+    <tr>
+      <th>Param Name</th>
+      <th>Param Value</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let obj of authCodePhaseQueryParamMap | keyvalue">
+      <td>{{obj.key}}</td>
+      <td>{{obj.value}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="accessTokenPhaseValueMap.size > 0">
+  <h2>Phase: Access Token</h2>
+  <table border="1">
+    <thead>
+    <tr>
+      <th>Name</th>
+      <th>Value</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let obj of accessTokenPhaseValueMap | keyvalue">
+      <td>{{obj.key}}</td>
+      <td>{{obj.value}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

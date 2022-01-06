@@ -1,11 +1,17 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { BeginComponent } from './views/begin/begin.component';
+import { ValidateComponent } from './views/validate/validate.component';
 
+const routes: Routes = [
+  { path: '', pathMatch: 'full', redirectTo: 'begin' },
+  { path: 'begin', component: BeginComponent },
+  { path: 'validate', component: ValidateComponent }
+];
 
-const routes: Routes = [];
-
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
-})
-export class AppRoutingModule { }
+@NgModule( {
+  imports: [ RouterModule.forRoot( routes ) ],
+  exports: [ RouterModule ]
+} )
+export class AppRoutingModule {
+}
