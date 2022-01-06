@@ -1,8 +1,8 @@
-#What is this
+# What is this
 This is a demo web front end client that shows the necessary basic PKCE flow of an OIDC/OAuth2 authentication against Keycloak.
 
-#How to setup
-##Setup Keycloak
+# How to setup
+## Setup Keycloak
 1. Just setup the keycloak server with the below (just spin up a docker container for this purpose - docker-compose.yaml):
 
 > Note: using 14902 as the port for Keycloak
@@ -32,7 +32,7 @@ This is a demo web front end client that shows the necessary basic PKCE flow of 
 * Advance Settings: Proof Key for Code Exchange Code Challenge Method: S256
 5. Click on "Users" -> "Add User"
 
-##Running this demo web client
+## Running this demo web client
 1. For the demo web client, the environment setting is in src -> environments -> environments.ts
 2. To run this client: ``ng serve``
 3. Access "http://localhost:4200" and open up the development panel on the browser if needed.
