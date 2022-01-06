@@ -7,19 +7,17 @@ This is a demo web front end client that shows the necessary basic PKCE flow of 
 
 > Note: using 14902 as the port for Keycloak
 
-``
-version: '3.7'
-services:
-  keycloak:
-    image: jboss/keycloak:14.0.0
-    container_name: keycloak
-    restart: always
-  ports:
-    - 14902:8080
-  environment:
-    KEYCLOAK_USER: admin
-    KEYCLOAK_PASSWORD: pwd1234
-``
+    version: '3.7'
+    services:
+      keycloak:
+        image: jboss/keycloak:14.0.0
+        container_name: keycloak
+        restart: always
+      ports:
+        - 14902:8080
+      environment:
+        KEYCLOAK_USER: admin
+        KEYCLOAK_PASSWORD: pwd1234
 
 2. Login to Keycloak and create a Keycloak Realm: **"demo"**
 3. Switch to the "demo" realm and create a client **"demopkce"**
